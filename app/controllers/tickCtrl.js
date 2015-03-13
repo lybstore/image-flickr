@@ -15,38 +15,39 @@ app.service("tickrService", function ($http, $q){
 
 .controller('tickCtrl', function($scope, $interval, tickrService) {
 
+	$scope.date = new Date();
+
 	var promise = tickrService.getjobs();
 	promise.then(function (data){
 
 		$scope.jobs = data.jobs;
-		//console.log($scope.jobs);
 		$scope.startAuto();
+
 	});
 
+	// JOBS FLICKR FUNCTIONS 
 
-// JOBS FLICKR FUNCTIONS 
+    $scope.jobNotification = 0;
 
-$scope.jobNotification = 0;
-
-  $scope.startAuto = function() {
-  	var timer = $interval(function() {
-  	
-        if ($scope.jobNotification < $scope.jobs.length -1) {
-          $scope.jobNotification += 1;
-        } else {
-          $scope.jobNotification = 0;
-          
-        }
-  
-  	}, 3000);
-  };
-  
+    var timer;
+	$scope.startAuto = function() {
+	  	timer = $interval(function(){
+	  		$scope.jobNotification = ($scope.jobNotification + 1) % $scope.jobs.length;
+	  	}, 5000);
+	};
+	  
 	$scope.isActive = function (index) {
 		return $scope.jobNotification === index;
-	};
+		
+	 };
 
 	$scope.showJobNotification = function (index) {
+		if (timer){
+			$interval.cancel(timer);
+			$scope.startAuto();
+		}
 		$scope.jobNotification = index;
 	};
+
 
 });	

@@ -19,25 +19,30 @@
 <body>
 	<section class="wrapper" data-ng-app="tickrApp">
 		
+
+
+	<div class="tickr-container">
+		<h1></h1>
 		<div data-ng-controller="tickCtrl">
-			
-			<ul>
-				<li data-ng-repeat="job in jobs" ng-show="isActive($index)">
-					<h1>{{job.jobTitle}}</h1>
-					<p>{{job.sector}}</p>
-					<a href="/"></a>
+			<h3>{{date | date:'fullDate' : 'GMT'}}</h3>
+			<ul class="tickrSlider">
+				<li class="tickrSlider-slide" ng-class="{'job-active' :isActive($index)}" data-ng-repeat="job in jobs">
+					<div class="tickrSlider-inner">
+						<h1>{{job.jobTitle}}</h1>
+						<p>{{job.sector}}</p>
+						<a class="tickrSlide-info" href="{{job.link}}">{{job.link}}</a>
+					</div>
 				</li>
 			</ul>
-
 			<!-- THUMBS -->
-
-			<nav>
-				<a data-ng-repeat="job in jobs" ng-class="{'active' :isActive($index)}" ng-click="showJobNotification($index);">
-					{{$index + 1}}
+			<nav class="indentifer-container">
+				<a class="tickSlider-indentifer" data-ng-repeat="job in jobs | limitTo : 10" ng-class="{'active' :isActive($index)}" ng-click="showJobNotification($index);">
+					<p>{{$index + 1}}</p>
 				</a>
 			</nav>
 			
 		</div>
+	</div>
 
 	</section>
 
