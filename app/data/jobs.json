@@ -1,0 +1,67 @@
+{
+	"name": "jobticker",
+	"version": ".5",
+	"date": "2011-09-01T11:31:22.042Z",
+	"jobs": [
+		{
+			"jobTitle": "Senior Accountant",
+			"sector": "Accounting & Finance",
+			"link": "/jobs/1"
+		},
+		{
+			"jobTitle": "Institutional Fixed Income Sales",
+			"sector": "Private Banking / Wealth Management",
+			"link": "/jobs/2"
+		},
+		{
+			"jobTitle": "Human Resources Coordinator",
+			"sector": "HR & Recruitment",
+			"link": "/jobs/3"
+		},
+		{
+			"jobTitle": "Risk Manager, V.P.",
+			"sector": "Derivatives",
+			"link": "/jobs/4"
+		},
+		{
+			"jobTitle": "Staffing Manager",
+			"sector": "HR & Recruitment",
+			"link": "/jobs/5"
+		},
+		{
+			"jobTitle": "Senior Product Consultant (PORTIA)",
+			"sector": "Accounting & Finance",
+			"link": "/jobs/6"
+		},
+		{
+			"jobTitle": "Corporate Sales Position, Global Markets",
+			"sector": "Derivatives",
+			"link": "/jobs/7"
+		},
+		{
+			"jobTitle": "Deputy Audit Director",
+			"sector": "Accounting & Finance",
+			"link": "/jobs/8"
+		},
+		{
+			"jobTitle": "Quantitative Strategist/Interest Rates",
+			"sector": "Derivatives",
+			"link": "/jobs/9"
+		},
+		{
+			"jobTitle": "Wealth Management Supervisor",
+			"sector": "Private Banking / Wealth Management",
+			"link": "/jobs/10"
+		},
+		{
+			"jobTitle": "Banking Search and Selection Recruiters/Researchers",
+			"sector": "HR & Recruitment",
+			"link": "/jobs/11"
+		},
+		{
+			"jobTitle": "Senior Recruitment Consultant",
+			"sector": "HR & Recruitment",
+			"link": "/jobs/12"
+		}
+	]
+}

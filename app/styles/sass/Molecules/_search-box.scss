@@ -1,0 +1,40 @@
+
+.search-box-container{
+	position: relative;
+	width: $search-box-width;
+	display: inline-block;
+	margin: 15px 50px;
+	float: right;
+	@include breakpoint(max-width 600px){
+		width: $search-box-width - 80;
+	}
+}
+
+.search-box{
+	width: $full-width;
+	padding: $default-padding / 3;
+	border: 2px solid $white;
+	border-radius: 2px $white;
+	@include none-select($none);
+	transition: 0.5s ease-in-out;
+	&:hover{
+		border: 2px solid $hover-boarder;
+		transition: 0.5s ease-in-out;
+	}
+}
+
+.search-box-icon{
+	position: absolute;
+	right: 0;
+	z-index: 9;
+	padding: $default-padding / 3 0;
+}
+
+.slide-show{
+	height: $search-box-width;
+	width: $search-box-width;
+	max-width: 80px;
+	max-height: 80px;
+	overflow: hidden;
+
+}
