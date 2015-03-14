@@ -1,1 +1,198 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}body{-webkit-font-smoothing:antialiased;-webkit-backface-visibility:hidden;-moz-osx-font-smoothing:grayscale;font-family:georgia,sans-serif;font-size:13px;background-color:#fff;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;color:#004e5e}h1,h2,h3,h4,p,span,pre,a{padding:10px}h1{font-size:23px;font-weight:bold}a{text-decoration:none;cursor:pointer;color:#004e5e}.tickr-container{position:relative;width:350px;margin:0 auto}.tickrSlider{width:100%;border:1px solid #dcdce5;max-width:348px;height:280px;background-color:#f2f2f2;position:relative;border-radius:2px}.indentifer-container{position:relative;margin-top:5px}.indentifer-container :last-child{margin-right:8px}.tickSlider-indentifer{margin:2px;width:8px;border:1px solid #dcdce5;border-radius:2px;display:inline-block;-webkit-transition:opacity 1s;transition:opacity 1s;line-height:12px}.tickSlider-indentifer:hover{background-color:#004e5e;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;color:#fff}.tickSlider-indentifer p{margin:0px;padding:0px}.active{background-color:#004e5e;-webkit-transition:opacity 1s;transition:opacity 1s;color:#fff;width:8px;border:1px solid #dcdce5}.tickrSlider-inner{position:relative;width:350px;height:280px}.tickrSlider-slide{opacity:0;position:absolute;top:0;-webkit-transition:opacity 3s;transition:opacity 3s}.job-active{opacity:1}.tickrSlide-info{position:absolute;bottom:10px;border:1px solid #dcdce5;right:10px;width:45px;color:#fff;background-color:#004e5e;border-radius:5px;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;z-index:800}.tickrSlide-info:hover{background-color:#fff;-webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;color:#004e5e}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: arial, sans-serif;
+  font-size: 13px;
+  background-color: #fff;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #006c81;
+}
+
+h1, h2, h3, h4, p, span, pre, a {
+  padding: 10px;
+}
+
+h1, h2 {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: georgia, sans-serif;
+}
+
+h2 {
+  background: #f2f2f2;
+  height: 30px;
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #006c81;
+}
+
+p {
+  color: #333;
+}
+
+.tickr-container {
+  position: relative;
+  width: 350px;
+  margin: 0 auto;
+  padding: 10px 20px 20px;
+  border: 1px solid #dcdce5;
+  border-radius: 2px;
+}
+.tickr-container h3 {
+  text-align: right;
+  padding: 10px 0;
+}
+
+.tickrSlider {
+  width: 100%;
+  border: 1px solid #dcdce5;
+  max-width: 348px;
+  height: 280px;
+  position: relative;
+  border-radius: 2px;
+}
+
+.indentifer-container {
+  position: relative;
+  margin-top: 5px;
+}
+.indentifer-container :first-child {
+  margin-left: 0px;
+}
+
+.tickSlider-indentifer {
+  margin: 2px;
+  width: 8px;
+  border: 1px solid #dcdce5;
+  border-radius: 2px;
+  display: inline-block;
+  -webkit-transition: opacity 1s;
+          transition: opacity 1s;
+  line-height: 12px;
+}
+.tickSlider-indentifer:hover {
+  background-color: #006c81;
+  -webkit-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+  color: #fff;
+}
+.tickSlider-indentifer p {
+  margin: 0px;
+  padding: 0px;
+  color: #006c81;
+}
+
+.active {
+  background-color: #006c81;
+  -webkit-transition: opacity 1s;
+          transition: opacity 1s;
+  width: 8px;
+  border: 1px solid #dcdce5;
+}
+.active p {
+  color: #fff;
+}
+
+.tickrSlider-inner {
+  position: relative;
+  width: 348px;
+  height: 280px;
+  cursor: pointer;
+}
+
+.tickrSlider-slide {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: opacity 1s;
+          transition: opacity 1s;
+}
+
+.job-active {
+  opacity: 1;
+}
+
+.tickrSlide-info {
+  z-index: 800;
+  position: absolute;
+  bottom: 10px;
+  border: 1px solid #dcdce5;
+  right: 15px;
+  width: 45px;
+  color: #fff;
+  background-color: #006c81;
+  border-radius: 5px;
+  -webkit-transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
+}
+.tickrSlide-info:hover {
+  background-color: #fff;
+  -webkit-transition: all 0.1s ease-in-out;
+          transition: all 0.1s ease-in-out;
+  color: #006c81;
+}

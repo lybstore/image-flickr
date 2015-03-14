@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en"> 
-	<head>
+<head>
 	 <meta charset="utf-8">
 	 <title>Image Gallery</title>
 	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,51 +16,33 @@
 
 
 	<body>
-	<section class="wrapper" data-ng-app="tickrApp">
-<<<<<<< HEAD
-		
 
 
-	<div class="tickr-container">
-		<h1></h1>
-		<div data-ng-controller="tickCtrl">
-			<h3>{{date | date:'fullDate' : 'GMT'}}</h3>
-			<ul class="tickrSlider">
-				<li class="tickrSlider-slide" ng-class="{'job-active' :isActive($index)}" data-ng-repeat="job in jobs">
-					<div class="tickrSlider-inner">
-						<h1>{{job.jobTitle}}</h1>
-						<p>{{job.sector}}</p>
-						<a class="tickrSlide-info" href="{{job.link}}">{{job.link}}</a>
-					</div>
-				</li>
-			</ul>
-			<!-- THUMBS -->
-			<nav class="indentifer-container">
-				<a class="tickSlider-indentifer" data-ng-repeat="job in jobs | limitTo : 10" ng-class="{'active' :isActive($index)}" ng-click="showJobNotification($index);">
-					<p>{{$index + 1}}</p>
-=======
-		<div data-ng-controller="tickCtrl">
-			<ul>
-				<li data-ng-repeat="job in jobs" ng-show="isActive($index)">
-					<h1>{{job.jobTitle}}</h1>
-					<p>{{job.sector}}</p>
-					<a href="/"></a>
-				</li>
-			</ul>
-			<!-- THUMBS -->
-			<nav>
-				<a data-ng-repeat="job in jobs" ng-class="{'active' :isActive($index)}" ng-click="showJobNotification($index);">
-					{{$index + 1}}
->>>>>>> 3816d96de8882e7f5d1893d6e5355f0dbe89886d
-				</a>
-			</nav>
-		</div>
-<<<<<<< HEAD
-	</div>
+	<section class="wrapper" data-ng-app="tickrApp">	
+			<div class="tickr-container" data-ng-controller="tickCtrl">
+				<h1>{{job.title.widgetTitle}}</h1>
 
-=======
->>>>>>> 3816d96de8882e7f5d1893d6e5355f0dbe89886d
-	</section>
+				<div>
+					<h3>{{date | date:'fullDate' : 'GMT'}}</h3>
+
+					<ul ng-mouseover="stopAuto()" ng-mouseleave="startAuto()" class="tickrSlider">
+						<li class="tickrSlider-slide" ng-class="{'job-active' :isActive($index)}" data-ng-repeat="job in jobs">
+							<div class="tickrSlider-inner">
+								<h2>{{job.jobTitle}}</h2>
+								<p>{{job.sector}}</p>
+								<a class="tickrSlide-info" href="{{job.link}}">{{job.link}}</a>
+							</div>
+						</li>
+					</ul>
+					<!-- THUMBS -->
+					<nav class="indentifer-container">
+						<a class="tickSlider-indentifer" data-ng-repeat="job in jobs | limitTo : 10" ng-class="{'active' :isActive($index)}" ng-click="showJobNotification($index);">
+							<p>{{$index + 1}}</p>
+						</a>
+					</nav>
+			    </div>
+		    </div>
+   </section>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
 	<script src="app/controllers/tickCtrl.js"></script>

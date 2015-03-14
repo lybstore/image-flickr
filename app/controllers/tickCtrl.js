@@ -32,7 +32,7 @@ app.service("tickrService", function ($http, $q){
     var timer;
 	$scope.startAuto = function() {
 	  	timer = $interval(function(){
-	  		$scope.jobNotification = ($scope.jobNotification + 1) % $scope.jobs.length;
+	  		$scope.jobNotification = ($scope.jobNotification + 1) % 10;
 	  	}, 5000);
 	};
 	  
@@ -41,13 +41,22 @@ app.service("tickrService", function ($http, $q){
 		
 	 };
 
-	$scope.showJobNotification = function (index) {
+		$scope.showJobNotification = function (index) {
 		if (timer){
 			$interval.cancel(timer);
 			$scope.startAuto();
 		}
 		$scope.jobNotification = index;
 	};
+	
+	$scope.stopAuto = function() {
+	  console.log('tickCtrl.stopAuto() triggered');
+	  if(timer) {
+  	  $interval.cancel(timer);
+  	  timer = undefined;	    
+	  }
+	}
+
 
 
 });	

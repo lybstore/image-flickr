@@ -1,2 +1,2 @@
 # image-flickr update 
-# Description of image flickr coming soon
+Description of image flickr coming soon

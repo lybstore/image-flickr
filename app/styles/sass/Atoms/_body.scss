@@ -2,15 +2,17 @@
 
 $none: none;
 $default: 0px;
-$body-font: georgia, sans-serif;
+$body-font: arial, sans-serif;
+$heading-font: georgia, sans-serif;
 $body-font-size: 13px;
-$heading-font-size: 23px;
+$heading-font-size: 15px;
 $bold: bold;
 $white: #fff;
-$green: #004e5e;
+$green: #006c81;
+$screen-font-color: #333;
 $full-width: 100%;
 $header-bg: rgba(0,0,0,.6);
-$default-padding: 15px;
+$default-padding: 10px;
 $hover-boarder: #680000;
 $search-box-width: 200px;
 
@@ -32,6 +34,51 @@ $search-box-width: 200px;
   top: 0;
 }
 
+@mixin default-border($default){
+	border: 1px solid #dcdce5;
+}
+
+@mixin widget-border-radius($none){
+	border-radius: 2px;
+}
+
+@mixin indentifer-styles($default){
+	margin: 2px;
+	width: 8px;
+	border: 1px solid #dcdce5;
+	@include widget-border-radius($default);
+	display: inline-block;
+	transition: opacity 1s;
+	line-height: 12px;
+	&:hover{
+		background-color: $green;
+		transition: all 0.2s ease-in-out;
+		color: $white;
+	}
+	p{
+		margin: 0px;
+		padding: 0px;
+		color: $green;
+	}
+}
+
+@mixin widget-slider-btn($default){
+	position: absolute;
+	bottom: 10px;
+	border: 1px solid #dcdce5;
+	right: 15px;
+	width: 45px;
+	color: $white;
+	background-color: $green;
+	border-radius: 5px;
+	transition: all 0.1s ease-in-out;
+	&:hover{
+		background-color: $white;
+		transition: all 0.1s ease-in-out;
+		color: $green;
+	}
+}
+
 
 // GLOBAL STYLES
 
@@ -48,15 +95,27 @@ body{
 }
 
 h1,h2,h3,h4,p,span,pre,a{
-	padding: 10px;}
+	padding: $default-padding;
+}
 
-h1{
+h1, h2{
 	font-size: $heading-font-size;
 	font-weight: $bold;
+	font-family: $heading-font;
+}
+
+h2{
+	background: #f2f2f2;
+  	height: $default + 30;
+  	line-height: $default + 30;
 }
 
 a{
 	text-decoration: $none;
 	cursor: pointer;    
 	color: $green;
+}
+
+p{
+	color: $screen-font-color;
 }

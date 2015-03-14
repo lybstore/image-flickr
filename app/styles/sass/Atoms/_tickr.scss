@@ -2,66 +2,59 @@
 	position: relative;
 	width: 350px;
 	margin: 0 auto;
+	padding: 10px 20px 20px;
+	@include default-border($default);
+	@include widget-border-radius($default);
+	h3{
+		text-align: right;
+		padding: 10px 0;
+	}
 }
 
 .tickrSlider{
-	width: 100%;
-	border: 1px solid #dcdce5;
+	width: $full-width;
+	@include default-border($default);
 	max-width: 348px;
 	height: 280px;
-	background-color: #f2f2f2;
 	position: relative;
-	border-radius: 2px;
+	@include widget-border-radius($default);
 }
 
 .indentifer-container{
 	position: relative;
 	margin-top: 5px;
-	:last-child{
-		margin-right: 8px;
+	:first-child{
+		margin-left: 0px;
 
 	}
 }
 
 .tickSlider-indentifer{
-	margin: 2px;
-	width: 8px;
-	border: 1px solid #dcdce5;
-	border-radius: 2px;
-	display: inline-block;
-	transition: opacity 1s;
-	line-height: 12px;
-	&:hover{
-		background-color: $green;
-		transition: all 0.2s ease-in-out;
-		color: $white;
-	}
-	p{
-		margin: 0px;
-		padding: 0px;
-	}
+	@include indentifer-styles($default);
 }
 
 .active{
 	background-color: $green;
 	transition: opacity 1s;
-	color: $white;
 	width: 8px;
-	border: 1px solid #dcdce5;
-
+	@include default-border($default);
+	p{
+		color: $white;
+	}
 }
 
 .tickrSlider-inner{
 	position: relative;
-	width: 350px;
+	width: 348px;
 	height: 280px;
+	cursor: pointer;
 }
 
 .tickrSlider-slide{
 	opacity:0;
 	position: absolute;
 	top: 0;
-	transition: opacity 3s;
+	transition: opacity 1s;
 }
 
 .job-active{
@@ -69,21 +62,8 @@
 }
 
 .tickrSlide-info{
-	position: absolute;
-	bottom: 10px;
-	border: 1px solid #dcdce5;
-	right: 10px;
-	width: 45px;
-	color: $white;
-	background-color: $green;
-	border-radius: 5px;
-	transition: all 0.1s ease-in-out;
 	z-index: 800;
-	&:hover{
-		background-color: $white;
-		transition: all 0.1s ease-in-out;
-		color: $green;
-	}
+	@include widget-slider-btn($default);
 }
 
 

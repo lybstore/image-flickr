@@ -1,9 +1,0 @@
-header{
-	position: fixed;
-	width: $full-width;
-	background-color: $header-bg;
-	@include no-margins($none);
-	padding: $default-padding;
-	height: 50px;
-}
-
