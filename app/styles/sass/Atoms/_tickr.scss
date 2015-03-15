@@ -1,31 +1,50 @@
+$susy: (
+    flow: ltr,
+    columns: 12,
+    gutters: 4/8,
+    math: fluid,
+    output: float,
+    gutter-position: split,
+);
+
 .tickr-container{
 	position: relative;
-	width: 350px;
-	margin: 0 auto;
+	margin-top: gutter(14);
+  	margin-bottom: gutter(14);
 	padding: 10px 20px 20px;
+	height: 410px;
+	overflow: hidden;
 	@include default-border($default);
 	@include widget-border-radius($default);
+	@include breakpoint((min-width 1500px) (max-width 2000px)){
+    	@include span (3);
+  	}
+	@include breakpoint((min-width 1120px) (max-width 1500px)){
+    	@include span (4);
+  	}
+	@include breakpoint((min-width 750px) (max-width 1120px)){
+    	@include span (6);
+  	}
+  	@include breakpoint((min-width 300px) (max-width 750px)){
+    	@include span (12);
+  	}
 	h3{
 		text-align: right;
-		padding: 10px 0;
+		padding: $default + 10 $default;
 	}
 }
 
 .tickrSlider{
-	width: $full-width;
 	@include default-border($default);
-	max-width: 348px;
 	height: 280px;
 	position: relative;
 	@include widget-border-radius($default);
 }
 
 .indentifer-container{
-	position: relative;
 	margin-top: 5px;
 	:first-child{
-		margin-left: 0px;
-
+		margin-left: $default;
 	}
 }
 
@@ -36,7 +55,6 @@
 .active{
 	background-color: $green;
 	transition: opacity 1s;
-	width: 8px;
 	@include default-border($default);
 	p{
 		color: $white;
@@ -44,10 +62,14 @@
 }
 
 .tickrSlider-inner{
-	position: relative;
-	width: 348px;
-	height: 280px;
 	cursor: pointer;
+	overflow: hidden;
+}
+
+.tickrSlider-top{
+	background: $grey;
+	display: inline-block;
+	width: $full-width;
 }
 
 .tickrSlider-slide{
@@ -55,6 +77,8 @@
 	position: absolute;
 	top: 0;
 	transition: opacity 1s;
+	width: $full-width;
+	height:  $full-width;
 }
 
 .job-active{
@@ -66,6 +90,10 @@
 	@include widget-slider-btn($default);
 }
 
+.placeholder{
+	background: $grey;
+	height: 350px;
+}
 
 
 

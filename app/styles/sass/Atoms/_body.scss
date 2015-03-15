@@ -4,11 +4,13 @@ $none: none;
 $default: 0px;
 $body-font: arial, sans-serif;
 $heading-font: georgia, sans-serif;
-$body-font-size: 13px;
-$heading-font-size: 15px;
+$body-font-size: 0.75em;
+$heading-font-size: 1.1em;
 $bold: bold;
 $white: #fff;
+$center: center;
 $green: #006c81;
+$grey: #f2f2f2;
 $screen-font-color: #333;
 $full-width: 100%;
 $header-bg: rgba(0,0,0,.6);
@@ -44,30 +46,35 @@ $search-box-width: 200px;
 
 @mixin indentifer-styles($default){
 	margin: 2px;
-	width: 8px;
 	border: 1px solid #dcdce5;
 	@include widget-border-radius($default);
 	display: inline-block;
 	transition: opacity 1s;
-	line-height: 12px;
+	background-color: #f2f2f2;
+	max-width: $default + 5;
+	font-size: $body-font-size;
+	padding: $default-padding - 3;
 	&:hover{
-		background-color: $green;
-		transition: all 0.2s ease-in-out;
-		color: $white;
+		background-color: $white;
+		transition: all 0.1s ease-in;
 	}
 	p{
 		margin: 0px;
 		padding: 0px;
 		color: $green;
+		&:hover{
+			color: $green;
+		}
 	}
 }
 
 @mixin widget-slider-btn($default){
 	position: absolute;
-	bottom: 10px;
+	bottom: 6px;
 	border: 1px solid #dcdce5;
-	right: 15px;
+	right: 6px;
 	width: 45px;
+	text-align: $center;
 	color: $white;
 	background-color: $green;
 	border-radius: 5px;
@@ -105,10 +112,12 @@ h1, h2{
 }
 
 h2{
-	background: #f2f2f2;
-  	height: $default + 30;
-  	line-height: $default + 30;
+  	height: $default + 10;
+  	line-height: $default + 10;
+  	padding: 10px 0;
 }
+
+
 
 a{
 	text-decoration: $none;

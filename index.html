@@ -19,19 +19,25 @@
 
 
 	<section class="wrapper" data-ng-app="tickrApp">	
-			<div class="tickr-container" data-ng-controller="tickCtrl">
-				<h1>{{job.title.widgetTitle}}</h1>
+			<div data-ng-controller="tickCtrl">
+				
+				
+			<section class="tickr-container">
+				<div>	
+					<h1>Latestest News</h1>
+				</div>
 
-				<div>
 					<h3>{{date | date:'fullDate' : 'GMT'}}</h3>
 
 					<ul ng-mouseover="stopAuto()" ng-mouseleave="startAuto()" class="tickrSlider">
 						<li class="tickrSlider-slide" ng-class="{'job-active' :isActive($index)}" data-ng-repeat="job in jobs">
 							<div class="tickrSlider-inner">
-								<h2>{{job.jobTitle}}</h2>
+								<span class="tickrSlider-top">
+									<h2>{{job.jobTitle}}</h2>
+								</span>
 								<p>{{job.sector}}</p>
-								<a class="tickrSlide-info" href="{{job.link}}">{{job.link}}</a>
 							</div>
+							<a class="tickrSlide-info" href="{{job.link}}">{{job.link}}</a>
 						</li>
 					</ul>
 					<!-- THUMBS -->
@@ -40,7 +46,33 @@
 							<p>{{$index + 1}}</p>
 						</a>
 					</nav>
-			    </div>
+			    </section>
+
+
+			    <section class="tickr-container">
+			    	<h2>Latestest News</h2>
+			    	<div class="placeholder"></div>
+			    </section>
+
+			    <section class="tickr-container">
+			    	<h2>Latestest News</h2>
+			    	<div class="placeholder"></div>
+			    </section>
+
+			    <section class="tickr-container">
+			    	<h2>Latestest News</h2>
+			    	<div class="placeholder"></div>
+			    </section>
+
+			    <section class="tickr-container">
+			    	<h2>Latestest News</h2>
+			    	<div class="placeholder"></div>
+			    </section>
+
+			    <section class="tickr-container">
+			    	<h2>Latestest News</h2>
+			    	<div class="placeholder"></div>
+			    </section>
 		    </div>
    </section>
 

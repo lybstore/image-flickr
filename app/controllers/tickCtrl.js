@@ -41,7 +41,7 @@ app.service("tickrService", function ($http, $q){
 		
 	 };
 
-		$scope.showJobNotification = function (index) {
+	$scope.showJobNotification = function (index) {
 		if (timer){
 			$interval.cancel(timer);
 			$scope.startAuto();
@@ -50,13 +50,10 @@ app.service("tickrService", function ($http, $q){
 	};
 	
 	$scope.stopAuto = function() {
-	  console.log('tickCtrl.stopAuto() triggered');
 	  if(timer) {
-  	  $interval.cancel(timer);
-  	  timer = undefined;	    
+	  	  $interval.cancel(timer);
+	  	  timer = undefined;	    
 	  }
 	}
-
-
 
 });	
