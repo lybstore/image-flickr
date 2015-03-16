@@ -5,7 +5,7 @@ $default: 0px;
 $body-font: arial, sans-serif;
 $heading-font: georgia, sans-serif;
 $body-font-size: 0.75em;
-$heading-font-size: 1.1em;
+$heading-font-size: 1.2em;
 $bold: bold;
 $white: #fff;
 $center: center;
@@ -46,17 +46,17 @@ $search-box-width: 200px;
 
 @mixin indentifer-styles($default){
 	margin: 2px;
-	border: 1px solid #dcdce5;
-	@include widget-border-radius($default);
+	//border: 1px solid #dcdce5;
+	border-radius: 65px;
 	display: inline-block;
 	transition: opacity 1s;
-	background-color: #f2f2f2;
+	background: rgba(0, 0, 0, 0.3);
 	max-width: $default + 5;
 	font-size: $body-font-size;
 	padding: $default-padding - 3;
 	&:hover{
-		background-color: $white;
 		transition: all 0.1s ease-in;
+		color: $green;
 	}
 	p{
 		margin: 0px;
@@ -68,23 +68,20 @@ $search-box-width: 200px;
 	}
 }
 
-@mixin widget-slider-btn($default){
+/*@mixin widget-slider-btn($default){
 	position: absolute;
-	bottom: 6px;
-	border: 1px solid #dcdce5;
-	right: 6px;
 	width: 45px;
 	text-align: $center;
 	color: $white;
-	background-color: $green;
-	border-radius: 5px;
+	background-color: rgba(0, 0, 0, 0.6);
 	transition: all 0.1s ease-in-out;
+	font-weight: 900;
 	&:hover{
 		background-color: $white;
 		transition: all 0.1s ease-in-out;
 		color: $green;
 	}
-}
+}*/
 
 
 // GLOBAL STYLES
@@ -98,17 +95,22 @@ body{
 	background-color: $white;
 	@include box-sizing($none);
 	@include none-select($none);
-	color: $green;
+	color: $white;
 }
 
 h1,h2,h3,h4,p,span,pre,a{
 	padding: $default-padding;
 }
 
+h1, h3{
+	color: $green;
+}
+
 h1, h2{
 	font-size: $heading-font-size;
 	font-weight: $bold;
 	font-family: $heading-font;
+	color: $white;
 }
 
 h2{
@@ -126,5 +128,6 @@ a{
 }
 
 p{
-	color: $screen-font-color;
+	color: $white;
+	padding: $default;
 }

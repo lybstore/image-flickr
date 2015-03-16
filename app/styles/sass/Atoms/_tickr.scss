@@ -11,12 +11,12 @@ $susy: (
 	position: relative;
 	margin-top: gutter(14);
   	margin-bottom: gutter(14);
-	padding: 10px 20px 20px;
-	height: 410px;
+	//padding: 10px 20px 20px;
+	height: 300px;
 	overflow: hidden;
 	@include default-border($default);
 	@include widget-border-radius($default);
-	@include breakpoint((min-width 1500px) (max-width 2000px)){
+	@include breakpoint((min-width 1500px) (max-width 2500px)){
     	@include span (3);
   	}
 	@include breakpoint((min-width 1120px) (max-width 1500px)){
@@ -27,6 +27,7 @@ $susy: (
   	}
   	@include breakpoint((min-width 300px) (max-width 750px)){
     	@include span (12);
+    	padding: 0;
   	}
 	h3{
 		text-align: right;
@@ -36,16 +37,29 @@ $susy: (
 
 .tickrSlider{
 	@include default-border($default);
-	height: 280px;
-	position: relative;
+	//height: 280px;
+	//position: relative;
 	@include widget-border-radius($default);
 }
 
 .indentifer-container{
-	margin-top: 5px;
+	position: absolute;
+	z-index: 99;
+	bottom: $default;
+	text-align: center;
+	background: rgba(255,255,255,.6);
+	padding: 10px 0;
+	width: $full-width;
+	text-align: center;
 	:first-child{
 		margin-left: $default;
 	}
+}
+
+.tickrSlider-img{
+	width: $full-width;
+	position: absolute;
+	top: 0;
 }
 
 .tickSlider-indentifer{
@@ -53,9 +67,8 @@ $susy: (
 }
 
 .active{
-	background-color: $green;
+	background: rgba(0, 0, 0, 0.9);
 	transition: opacity 1s;
-	@include default-border($default);
 	p{
 		color: $white;
 	}
@@ -67,15 +80,19 @@ $susy: (
 }
 
 .tickrSlider-top{
-	background: $grey;
+	background: rgba(0, 0, 0, 0.6);
 	display: inline-block;
 	width: $full-width;
+	position: relative;
+	z-index: 99;
+
 }
 
 .tickrSlider-slide{
 	opacity:0;
 	position: absolute;
 	top: 0;
+	left: 0;
 	transition: opacity 1s;
 	width: $full-width;
 	height:  $full-width;
@@ -85,10 +102,6 @@ $susy: (
 	opacity: 1;
 }
 
-.tickrSlide-info{
-	z-index: 800;
-	@include widget-slider-btn($default);
-}
 
 .placeholder{
 	background: $grey;

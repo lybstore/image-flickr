@@ -21,56 +21,46 @@
 	<section class="wrapper" data-ng-app="tickrApp">	
 			<div data-ng-controller="tickCtrl">
 				
-				
+
 			<section class="tickr-container">
-				<div>	
-					<h1>Latestest News</h1>
-				</div>
-
-					<h3>{{date | date:'fullDate' : 'GMT'}}</h3>
-
-					<ul ng-mouseover="stopAuto()" ng-mouseleave="startAuto()" class="tickrSlider">
-						<li class="tickrSlider-slide" ng-class="{'job-active' :isActive($index)}" data-ng-repeat="job in jobs">
+					<section ng-mouseover="stopAuto()" ng-mouseleave="startAuto()" class="tickrSlider">
+						<a class="tickrSlide-info" href="{{job.link}}">
+						<div class="tickrSlider-slide" ng-class="{'job-active' :isActive($index)}" data-ng-repeat="job in jobs">
 							<div class="tickrSlider-inner">
 								<span class="tickrSlider-top">
 									<h2>{{job.jobTitle}}</h2>
+									<p>{{job.sector}}</p>
 								</span>
-								<p>{{job.sector}}</p>
+								<img class="tickrSlider-img" ng-src="{{job.images}}" alt="{{job.jobTitle}}" />
 							</div>
-							<a class="tickrSlide-info" href="{{job.link}}">{{job.link}}</a>
-						</li>
-					</ul>
+						</div>
+						</a>
+					</section>
 					<!-- THUMBS -->
 					<nav class="indentifer-container">
 						<a class="tickSlider-indentifer" data-ng-repeat="job in jobs | limitTo : 10" ng-class="{'active' :isActive($index)}" ng-click="showJobNotification($index);">
-							<p>{{$index + 1}}</p>
 						</a>
 					</nav>
 			    </section>
 
 
 			    <section class="tickr-container">
-			    	<h2>Latestest News</h2>
 			    	<div class="placeholder"></div>
 			    </section>
 
 			    <section class="tickr-container">
-			    	<h2>Latestest News</h2>
 			    	<div class="placeholder"></div>
 			    </section>
 
 			    <section class="tickr-container">
-			    	<h2>Latestest News</h2>
 			    	<div class="placeholder"></div>
 			    </section>
 
 			    <section class="tickr-container">
-			    	<h2>Latestest News</h2>
 			    	<div class="placeholder"></div>
 			    </section>
 
 			    <section class="tickr-container">
-			    	<h2>Latestest News</h2>
 			    	<div class="placeholder"></div>
 			    </section>
 		    </div>
